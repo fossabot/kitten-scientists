@@ -483,9 +483,47 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Space
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Space
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#planet-buildings" class="md-nav__link">
+    Planet Buildings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-missions" class="md-nav__link">
+    Start Missions
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -651,6 +689,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#planet-buildings" class="md-nav__link">
+    Planet Buildings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#start-missions" class="md-nav__link">
+    Start Missions
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -669,18 +729,28 @@
 
 
 <h1 id="space">Space<a class="headerlink" href="#space" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>This section is still pending being documented.</p>
-<p>Our goal is to provide a full documentation during the beta phase. Please check back soon.</p>
-</div>
+<h2 id="planet-buildings">Planet Buildings<a class="headerlink" href="#planet-buildings" title="Permanent link">&para;</a></h2>
+<p>When you enable a building, this building will be built if all of these are true:</p>
+<ol>
+<li>
+<p>Less than <strong>Max</strong> buildings have already been built.</p>
+</li>
+<li>
+<p><em>All</em> of the resources required for the building to built are filled to <strong>Trigger</strong> of their stock capacity.</p>
+</li>
+<li>
+<p><em>All</em> of the resources required for the building to built are sufficiently available after considering configured <strong>Stock</strong> and <strong>Consume</strong>.</p>
+</li>
+</ol>
+<h2 id="start-missions">Start Missions<a class="headerlink" href="#start-missions" title="Permanent link">&para;</a></h2>
+<p>The missions you select, will automatically started as soon as the required materials are available.</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 12, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 15, 2023</span>
       
         <br>
         Created:
