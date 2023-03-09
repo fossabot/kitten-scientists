@@ -441,9 +441,47 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Resource Control
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Resource Control
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#stock" class="md-nav__link">
+    Stock
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consume" class="md-nav__link">
+    Consume
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -651,6 +689,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#stock" class="md-nav__link">
+    Stock
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#consume" class="md-nav__link">
+    Consume
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -669,15 +729,25 @@
 
 <h1 id="resource-control">Resource Control<a class="headerlink" href="#resource-control" title="Permanent link">&para;</a></h1>
 <p>This section allows you to control how much of your resources will be consumed by KS automations.</p>
+<h2 id="stock">Stock<a class="headerlink" href="#stock" title="Permanent link">&para;</a></h2>
 <p>The value you set for <strong>Stock</strong> determines the amount of the resource that KS will never touch. The only reason to set this value to anything but <code>0</code>, is for you to manually do something. The stocked amount of the resource will be entirely unavailable to KS.</p>
-<p>The <strong>Consume</strong> rate defines how much of an available resource should be made available to automation as a percentage. The usefulness of this value is debateable.</p>
+<h2 id="consume">Consume<a class="headerlink" href="#consume" title="Permanent link">&para;</a></h2>
+<p>The <strong>Consume</strong> rate defines how much of an available resource should be made available to automation as a percentage.</p>
+<p>This applies to the amount of resources that are available after the <strong>Stock</strong> has been considered. Of the excess amount beyond your stock, the consume rate is made available for consumption.</p>
+<p>The default value for this is always <code>1</code>. You would usually want to lower this, if you want to interact with the game more manually.</p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Your capacity for <strong>Wood</strong> is <code>10K</code>. Your <strong>Stock</strong> for Wood is <code>5K</code>. Your <strong>Consume</strong> rate for Wood is set to <code>0.1</code>.</p>
+<p>When an automation now asks for the available amount of Wood, we would expect the result to be:</p>
+<p>( 10K Wood - 5K Stock ) * 0.1 Consume Rate = 500 Wood</p>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 29, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 9, 2023</span>
       
         <br>
         Created:
