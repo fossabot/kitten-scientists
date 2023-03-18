@@ -897,7 +897,7 @@
 <p>Please help us <a href="https://crowdin.com/project/kitten-scientists">translate <abbr title="Kitten Scientists">KS</abbr></a>, either by contributing missing translations or reviewing the existing entries.</p>
 </div>
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
-<p>The script is written in <a href="https://www.typescriptlang.org/">TypeScript</a>. The <abbr title="JavaScript">JS</abbr> userscript itself is not intended to be edited. Changes need to be made in the <a href="https://github.com/kitten-science/kitten-scientists/tree/main/packages/userscript/source">userscript source code</a> and then be compiled into the actual userscript.</p>
+<p>The script is written in <a href="https://www.typescriptlang.org/">TypeScript</a>. The <abbr title="JavaScript">JS</abbr> userscript itself is not intended to be edited. Changes need to be made in the <a href="https://github.com/kitten-science/kitten-scientists/tree/main/packages/kitten-scientists/source">userscript source code</a> and then be compiled into the actual userscript.</p>
 <p>The project is set up to be used with <a href="https://code.visualstudio.com/">Visual Studio Code</a>. While other editors will work fine, some integrations have been prepared to make the development process easier.</p>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <p>The development environment is expected to be a POSIX-compliant system. On Windows, WSL will do fine.</p>
@@ -905,9 +905,9 @@
 <p>Additionally, you will need to have <a href="https://www.docker.com/get-started">Docker</a> available, to use the container-based Kittens Game development server. If you do not have Docker, you can still build a release version of the script and drop that into your userscript manager.</p>
 <h2 id="general-development">General Development<a class="headerlink" href="#general-development" title="Permanent link">&para;</a></h2>
 <p>Whenever you want to see the result of your changes, use:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>yarn<span class="w"> </span>userscript:build
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>yarn<span class="w"> </span>kitten-scientists:build
 </code></pre></div>
-<p>This will <a href="/reference/Repository Scripts/index.md#userscriptbuild">build a fresh version of the userscript</a>. <em>If</em> you are running a development container, this build output will also be used the next time you refresh the page.</p>
+<p>This will <a href="/reference/Repository Scripts/index.md#kitten-scientistsbuild">build a fresh version of the userscript</a>. <em>If</em> you are running a development container, this build output will also be used the next time you refresh the page.</p>
 <h2 id="development-with-kittens-game-container">Development with Kittens Game Container<a class="headerlink" href="#development-with-kittens-game-container" title="Permanent link">&para;</a></h2>
 <p>The development container provides a version of Kittens Game that already a Kitten Scientists version injected into it, based on your local development state.</p>
 <p>When the container is built, it downloads the latest version of the game from <a href="https://bitbucket.org/bloodrizer/kitten-game">https://bitbucket.org/bloodrizer/kitten-game</a>.</p>
@@ -923,7 +923,7 @@
 <li>
 <p>Watcher (experimental)</p>
 <p>Start a watcher to continuously rebuild <abbr title="Kitten Scientists">KS</abbr> when you make code changes.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>yarn<span class="w"> </span>userscript:watch
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>yarn<span class="w"> </span>kitten-scientists:watch
 </code></pre></div>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
@@ -943,9 +943,9 @@
 <ol>
 <li>
 <p>Run the build script.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>yarn<span class="w"> </span>userscript:preview
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>yarn<span class="w"> </span>kitten-scientists:preview
 </code></pre></div>
-<p>The userscript is placed in the <code>packages/userscript/output</code> directory.</p>
+<p>The userscript is placed in the <code>packages/kitten-scientists/output</code> directory.</p>
 </li>
 </ol>
 <h2 id="type-checking">Type-Checking<a class="headerlink" href="#type-checking" title="Permanent link">&para;</a></h2>
@@ -1004,13 +1004,13 @@
 <h2 id="releases">Releases<a class="headerlink" href="#releases" title="Permanent link">&para;</a></h2>
 <h3 id="building-a-release-version-of-the-userscript">Building a Release Version of the Userscript<a class="headerlink" href="#building-a-release-version-of-the-userscript" title="Permanent link">&para;</a></h3>
 <p>Run the script to build the release:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>yarn<span class="w"> </span>userscript:release
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>yarn<span class="w"> </span>kitten-scientists:release
 </code></pre></div>
 <h3 id="releasing-a-new-version">Releasing a New Version<a class="headerlink" href="#releasing-a-new-version" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>Build a preview of the script:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>yarn<span class="w"> </span>userscript:preview
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>yarn<span class="w"> </span>kitten-scientists:preview
 </code></pre></div>
 </li>
 <li>
@@ -1056,7 +1056,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 12, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 18, 2023</span>
       
         <br>
         Created:
