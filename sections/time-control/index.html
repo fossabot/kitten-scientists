@@ -511,9 +511,102 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Time Control
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Time Control
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tempus-fugit" class="md-nav__link">
+    Tempus Fugit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-skip" class="md-nav__link">
+    Time Skip
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reset-timeline" class="md-nav__link">
+    Reset Timeline
+  </a>
+  
+    <nav class="md-nav" aria-label="Reset Timeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bonfire" class="md-nav__link">
+    Bonfire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#religion" class="md-nav__link">
+    Religion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-control" class="md-nav__link">
+    Resource Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#space" class="md-nav__link">
+    Space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrades" class="md-nav__link">
+    Upgrades
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -651,6 +744,83 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tempus-fugit" class="md-nav__link">
+    Tempus Fugit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#time-skip" class="md-nav__link">
+    Time Skip
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reset-timeline" class="md-nav__link">
+    Reset Timeline
+  </a>
+  
+    <nav class="md-nav" aria-label="Reset Timeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bonfire" class="md-nav__link">
+    Bonfire
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#religion" class="md-nav__link">
+    Religion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource-control" class="md-nav__link">
+    Resource Control
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#space" class="md-nav__link">
+    Space
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time" class="md-nav__link">
+    Time
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#upgrades" class="md-nav__link">
+    Upgrades
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -668,18 +838,47 @@
 
 
 <h1 id="time-control">Time Control<a class="headerlink" href="#time-control" title="Permanent link">&para;</a></h1>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>This section is still pending being documented.</p>
-<p>Our goal is to provide a full documentation during the beta phase. Please check back soon.</p>
+<p>As the name suggests, this section contains automations that control time itself.</p>
+<h2 id="tempus-fugit">Tempus Fugit<a class="headerlink" href="#tempus-fugit" title="Permanent link">&para;</a></h2>
+<p>Automatically spend collected temporal flux to speed up time, if you have stored up to <strong>Trigger</strong> of your capacity.</p>
+<h2 id="time-skip">Time Skip<a class="headerlink" href="#time-skip" title="Permanent link">&para;</a></h2>
+<p>Allows you to configure when <abbr title="Kitten Scientists">KS</abbr> should automatically combust <abbr title="Time crystals">TCs</abbr> to skip years.</p>
+<p>For a skip to be triggered, all of these have to be true:</p>
+<ol>
+<li>We are within an enabled <strong>Cycle</strong>.</li>
+<li>We are within an enabled <strong>Season</strong>.</li>
+</ol>
+<p><abbr title="Kitten Scientists">KS</abbr> will skip as many as the configured <strong>Max</strong> years.</p>
+<h2 id="reset-timeline">Reset Timeline<a class="headerlink" href="#reset-timeline" title="Permanent link">&para;</a></h2>
+<p>This automation allows you to reset your entire game, when all your configured conditions are met.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Misconfiguration can lead to unexpected resets, and loss of important resources.</p>
+<p>Make sure to back up your save before experimenting with auto-resets!</p>
 </div>
+<p>The options should be pretty straight-forward, but let's look at them in detail regardless.</p>
+<p>Most importantly, keep in mind that triggers, which are set to <strong>Infinite</strong>, will never be reached, and your game will never be reset. This is just a save value to use so enabling that reset condition doesn't instantly trigger a reset.</p>
+<h3 id="bonfire">Bonfire<a class="headerlink" href="#bonfire" title="Permanent link">&para;</a></h3>
+<p>Every enabled building has to be built <strong>Trigger</strong> times.</p>
+<h3 id="religion">Religion<a class="headerlink" href="#religion" title="Permanent link">&para;</a></h3>
+<p>Every enabled building has to be built <strong>Trigger</strong> times.</p>
+<h3 id="resource-control">Resource Control<a class="headerlink" href="#resource-control" title="Permanent link">&para;</a></h3>
+<p>Every enabled resource must be in stock at the given amount.</p>
+<h3 id="space">Space<a class="headerlink" href="#space" title="Permanent link">&para;</a></h3>
+<p>Every enabled building has to be built <strong>Trigger</strong> times.</p>
+<h3 id="time">Time<a class="headerlink" href="#time" title="Permanent link">&para;</a></h3>
+<p>Every enabled building has to be built <strong>Trigger</strong> times.</p>
+<h3 id="upgrades">Upgrades<a class="headerlink" href="#upgrades" title="Permanent link">&para;</a></h3>
+<p>Every enabled upgrade has to have been researched.</p>
+<!-- prettier-ignore-start -->
+<!-- prettier-ignore-end -->
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 12, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 18, 2023</span>
       
         <br>
         Created:
