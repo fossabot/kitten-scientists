@@ -898,20 +898,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#testsbuild" class="md-nav__link">
-    tests:build
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testsrun" class="md-nav__link">
-    tests:run
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#typecheckall" class="md-nav__link">
     typecheck:all
   </a>
@@ -1059,20 +1045,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#testsbuild" class="md-nav__link">
-    tests:build
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#testsrun" class="md-nav__link">
-    tests:run
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#typecheckall" class="md-nav__link">
     typecheck:all
   </a>
@@ -1213,7 +1185,8 @@
 </li>
 <li>
 <p>Description:</p>
-<p><em>documentation pending</em></p>
+<p>Build the Kitten Scientists userscript.</p>
+<p>This builds the version of the script that is also used in the development container.</p>
 </li>
 </ul>
 <h2 id="kitten-scientistspreview">kitten-scientists:preview<a class="headerlink" href="#kitten-scientistspreview" title="Permanent link">&para;</a></h2>
@@ -1226,7 +1199,7 @@
 </li>
 <li>
 <p>Description:</p>
-<p><em>documentation pending</em></p>
+<p>Build a development release version of the userscript.</p>
 </li>
 </ul>
 <h2 id="kitten-scientistsrelease">kitten-scientists:release<a class="headerlink" href="#kitten-scientistsrelease" title="Permanent link">&para;</a></h2>
@@ -1240,7 +1213,8 @@
 </li>
 <li>
 <p>Description:</p>
-<p><em>documentation pending</em></p>
+<p>Build a release version of the Kitten Scientists userscript.</p>
+<p>This is usually only used from CI to build both the regular version of the script, as well as a minified build. When you use this locally, it still builds both files, but clears the output directory between builds. So you end up with only the regular version.</p>
 </li>
 </ul>
 <h2 id="kitten-scientistsversion">kitten-scientists:version<a class="headerlink" href="#kitten-scientistsversion" title="Permanent link">&para;</a></h2>
@@ -1253,7 +1227,7 @@
 </li>
 <li>
 <p>Description:</p>
-<p><em>documentation pending</em></p>
+<p>Returns the version for the Kitten Scientists userscript.</p>
 </li>
 </ul>
 <h2 id="kitten-scientistswatch">kitten-scientists:watch<a class="headerlink" href="#kitten-scientistswatch" title="Permanent link">&para;</a></h2>
@@ -1266,7 +1240,11 @@
 </li>
 <li>
 <p>Description:</p>
-<p><em>documentation pending</em></p>
+<p>Builds the Kitten Scientists userscript and watches all files for changes. If changes are detected, the script is rebuilt.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This watcher has caused problems in the past, generating broken output. Use at your own risk.</p>
+</div>
 </li>
 </ul>
 <h2 id="lintall">lint:all<a class="headerlink" href="#lintall" title="Permanent link">&para;</a></h2>
@@ -1282,38 +1260,12 @@
 <p>Check source code for style issues.</p>
 </li>
 </ul>
-<h2 id="testsbuild">tests:build<a class="headerlink" href="#testsbuild" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Project: <code>@kitten-science/tests</code></li>
-<li>
-<p>Source:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>tsc<span class="w"> </span>--build
-</code></pre></div>
-</li>
-<li>
-<p>Description:</p>
-<p>Build tests.</p>
-</li>
-</ul>
-<h2 id="testsrun">tests:run<a class="headerlink" href="#testsrun" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Project: <code>@kitten-science/tests</code></li>
-<li>
-<p>Source:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>mocha<span class="w"> </span>./build/tests/*.spec.js
-</code></pre></div>
-</li>
-<li>
-<p>Description:</p>
-<p>Execute tests.</p>
-</li>
-</ul>
 <h2 id="typecheckall">typecheck:all<a class="headerlink" href="#typecheckall" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Project: <code>kitten-scientists</code></li>
 <li>
 <p>Source:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>tsc<span class="w"> </span>--noEmit<span class="w"> </span>--incremental<span class="w"> </span><span class="nb">false</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>tsc<span class="w"> </span>--noEmit<span class="w"> </span>--incremental<span class="w"> </span><span class="nb">false</span>
 </code></pre></div>
 </li>
 <li>
@@ -1327,7 +1279,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 14, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 24, 2023</span>
       
         <br>
         Created:
