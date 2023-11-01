@@ -945,11 +945,11 @@
 <h2 id="container">Container<a class="headerlink" href="#container" title="Permanent link">&para;</a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If you're not familiar with Docker/OCI containers, then you can safely ignore this section.</p>
+<p>If you're not familiar with Podman/OCI containers, then you can safely ignore this section.</p>
 </div>
 <p>You can pull any version of the script as a container. The images are hosted on the <a href="https://github.com/kitten-science/kitten-scientists/pkgs/container/kitten-scientists">GitHub registry</a>.</p>
 <p>The container exposes Kittens Game's own development server on port 8080. It has the version of the userscript injected into it, according to the tag on the image.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>docker<span class="w"> </span>run<span class="w"> </span>--publish<span class="w"> </span><span class="m">8080</span>:8080<span class="w"> </span>--rm<span class="w"> </span>ghcr.io/kitten-science/kitten-scientists:2.0.0-beta.7
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>podman<span class="w"> </span>run<span class="w"> </span>--publish<span class="w"> </span><span class="m">8080</span>:8080<span class="w"> </span>--rm<span class="w"> </span>ghcr.io/kitten-science/kitten-scientists:2.0.0-beta.7
 </code></pre></div>
 <!-- prettier-ignore-start -->
 <!-- prettier-ignore-end -->
@@ -959,7 +959,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 19, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 1, 2023</span>
       
         <br>
         Created:
